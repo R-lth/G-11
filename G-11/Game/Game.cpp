@@ -2,6 +2,7 @@
 
 int main()
 {
+    SetConsoleTitle(L"G- 11");
     SetConsoleOutputCP(CP_UTF8);
 
     std::string filePath = "../Asset/Title.txt";
