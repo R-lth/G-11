@@ -8,7 +8,10 @@
 
 namespace Utils 
 {
+	Color DetermineColor(const char& ch);
 	void SetCursorPos(const std::vector<int>& pos);
 	void SetTextColor(const Color& color);
+	void SetPosColor(const std::vector<int>& pos, const Color& color);
+	void PrintChar(const char& ch, const std::vector<int>& pos);
 	void PrintChar(const char& ch, const std::vector<int>& pos, const Color& color);
 }

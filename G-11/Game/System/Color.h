@@ -8,7 +8,7 @@ enum Color
 	CYAN,
 	RED,
 	MAGENTA,
-	BROWN,
+	Orange,
 	LIGHTGRAY,
 	DARKGRAY,
 	LIGHTBLUE,
