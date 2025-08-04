@@ -84,15 +84,18 @@ void Engine::BeginPlay()
 void Engine::Tick(float deltaTime)
 {
 	// 매 프레임 로직
+}
+
+void Engine::Render()
+{
+#pragma region 메뉴
 	// TODO. 메뉴는 위치 고민해 보기
 	MenuUI::Get().KeyInput();
 	mainLevel = GameMode::Get().GetLevel();
 	std::vector<int> startPos = { 20, 15 };
 	MenuUI::Get().Render(startPos);
-}
+#pragma endregion
 
-void Engine::Render()
-{
 	if (mainLevel)
 	{
 		mainLevel->Render();

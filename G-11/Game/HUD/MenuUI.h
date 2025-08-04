@@ -33,5 +33,4 @@ private:
     std::vector<MenuItem*> menus;
     int size = 0;
     int currentIndex = 0;
-    void ClearConsole() const;
 };

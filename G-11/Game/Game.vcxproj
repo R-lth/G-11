@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Level\G11.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HUD\HUD.cpp" />
     <ClCompile Include="HUD\MenuUI.cpp" />
@@ -31,6 +32,7 @@
     <ClCompile Include="System\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Level\G11.h" />
     <ClInclude Include="HUD\MenuUI.h" />
     <ClInclude Include="Level\IntroLevel.h" />
     <ClInclude Include="Level\Level.h" />

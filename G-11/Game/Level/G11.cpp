@@ -1,0 +1,13 @@
+﻿#include "G11.h"
+
+void G11::BeginPlay() 
+{
+}
+
+void G11::Tick(float deltaTime)
+{
+}
+
+void G11::Render() 
+{
+}

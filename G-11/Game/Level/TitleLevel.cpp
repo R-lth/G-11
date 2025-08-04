@@ -1,10 +1,5 @@
 ﻿#include "TitleLevel.h"
 
-TitleLevel::TitleLevel()
-{
-
-}
-
 void TitleLevel::BeginPlay() 
 {
 

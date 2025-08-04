@@ -35,7 +35,7 @@ void MenuUI::KeyInput()
     {
         /*0에서 위로 올라가면 마지막으로 순환시켜야 하는데,
            -1 하면 음수가 되니 + size로 보정해서 항상 양수로 만든다.*/
-        currentIndex = ((currentIndex - 1) + size/*음수 방지*/) % size;
+        currentIndex = (currentIndex - 1 + size/*음수 방지*/) % size;
     }
     else if (Input::Get().GetKeyDown(VK_DOWN))
     {
@@ -71,9 +71,4 @@ void MenuUI::Render(const std::vector<int>& startPos) const
     }
 
     Utils::SetTextColor(Color::WHITE);
-}
-
-void MenuUI::ClearConsole() const
-{
-    system("cls");
 }

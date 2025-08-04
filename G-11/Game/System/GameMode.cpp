@@ -4,12 +4,12 @@ GameMode::GameMode()
 {
 	tile = new TitleLevel();
 	intro = new IntroLevel();
-	//miniGame = new MiniGame();
+	miniGame = new G11();
 	//ending = new Ending();
 
 	arr.emplace_back(tile);
 	arr.emplace_back(intro);
-	//arr.emplace_back(miniGame);
+	arr.emplace_back(miniGame);
 	//arr.emplace_back(ending);
 
 	size = static_cast<int>(arr.size());
@@ -45,5 +45,5 @@ void GameMode::NextLevel()
 	system("cls");
 
 	index = (index + 1 == size) ? 0 : index + 1;
-	mainLevel = arr[index];
+	SetLevel(arr[index]);
 }
