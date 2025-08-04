@@ -63,3 +63,23 @@ void HUD::RenderText(std::string filePath, std::vector<int> cursorPos, Color col
         ++movePos[0];
     }
 }
+
+void HUD::RenderJson(std::string filePath, std::vector<int> cursorPos)
+{
+    std::ifstream file(filePath);
+    if (!file.is_open()) {
+        std::cerr << "Failed to open json: " << std::endl;
+    }
+
+    json j;
+    file >> j;
+
+    // TODO. ★ 스타워즈 인트로 자막 만들기 
+
+    Utils::SetPosColor({0, 0}, Color::Orange);
+
+    for (const auto& credit : j["intro_credit"]) {
+        std::string str = credit.get<std::string>(); // "따음표" 제외
+        std::cout << str << std::endl;
+    }
+}

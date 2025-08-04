@@ -4,7 +4,7 @@ MenuUI::MenuUI()
 {
     menus.emplace_back(
         new MenuItem( 
-        "Resume Game",
+        "Next",
         []() { GameMode::Get().NextLevel(); }
         )
     );

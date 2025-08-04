@@ -44,9 +44,6 @@ void GameMode::NextLevel()
 {
 	system("cls");
 
-	// TODO. ★ 4가지 레벨(제목/인트로/게임/엔딩)을 어떻게 전환시킬지
-	// 메뉴는 고정돼 있고, 이미 할당된 벡터에서만 이동 시키는 식으로
-
 	index = (index + 1 == size) ? 0 : index + 1;
 	mainLevel = arr[index];
 }

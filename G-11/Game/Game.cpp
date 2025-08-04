@@ -11,8 +11,8 @@ int main()
     engine = nullptr;
 
     // TODO. 게임 진행 순서
-    // 1. Title
-    // 2. Intro : 게임 세계관 및 Skip
+    // 1. Title (완료)
+    // 2. Intro (진행 중)
     // 3. Game
     // 4. Ending
 

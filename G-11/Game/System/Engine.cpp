@@ -10,6 +10,8 @@ Engine::Engine()
 	info.bVisible = false;
 	info.dwSize = 1;
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
+	//
+	SetConsoleOutputCP(CP_UTF8);
 #pragma endregion
 	// 엔진 설정
 	LoadEngineSettings();
@@ -85,7 +87,7 @@ void Engine::Tick(float deltaTime)
 	// TODO. 메뉴는 위치 고민해 보기
 	MenuUI::Get().KeyInput();
 	mainLevel = GameMode::Get().GetLevel();
-	std::vector<int> startPos = { 20, 12 };
+	std::vector<int> startPos = { 20, 15 };
 	MenuUI::Get().Render(startPos);
 }
 
