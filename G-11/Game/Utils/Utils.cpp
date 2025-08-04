@@ -57,3 +57,9 @@ void Utils::PrintChar(const char& ch, const std::vector<int>& pos, const Color& 
 	SetTextColor(color);
 	std::cout << ch;
 }
+
+void Utils::PrintStr(const std::string& str, const std::vector<int>& pos)
+{
+	SetCursorPos(pos);
+	std::cout << str << std::endl;
+}
