@@ -2,8 +2,8 @@
 
 #include "../System/GameMode.h"
 #include "../Level/Level.h"
-#include "../System/Utils.h"
-#include "../System/Input.h"
+#include "../Utils/Utils.h"
+#include "../Input/Input.h"
 #include <functional>
 #include <conio.h> 
 
@@ -28,6 +28,7 @@ public:
 
     void KeyInput();
     void Render(const std::vector<int>& startPos) const;
+    void Run(const std::vector<int>& startPos);
 
 private:
     std::vector<MenuItem*> menus;

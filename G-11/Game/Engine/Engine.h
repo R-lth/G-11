@@ -1,8 +1,8 @@
 ﻿#pragma once
 
-#include "Singleton.h"
-#include "Input.h"
-#include "Utils.h"
+#include "../Utils/Utils.h"
+#include "../Utils/Singleton.h"
+#include "../Input/Input.h"
 #include "../Level/Level.h"
 #include "../HUD/MenuUI.h"
 #include <fstream>

@@ -1,7 +1,7 @@
 ﻿#pragma once
 
-#include "../System/Singleton.h"
-#include "../System/Engine.h"
+#include "../Utils/Singleton.h"
+#include "../Engine/Engine.h"
 #include "../Level/TitleLevel.h"
 #include "../Level/IntroLevel.h"
 #include "../Level/G11.h"

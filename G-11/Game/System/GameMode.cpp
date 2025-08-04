@@ -13,6 +13,7 @@ GameMode::GameMode()
 	//arr.emplace_back(ending);
 
 	size = static_cast<int>(arr.size());
+	mainLevel = arr[0];
 }
 
 GameMode::~GameMode()
@@ -22,6 +23,16 @@ GameMode::~GameMode()
 		delete mainLevel;
 		mainLevel = nullptr;
 	}
+
+	for (Level* level : arr) 
+	{
+		if (level) 
+		{
+			delete level;
+			level = nullptr;
+		}
+	}
+	arr.clear();
 }
 
 void GameMode::SetLevel(Level* newLevel)
@@ -45,5 +56,7 @@ void GameMode::NextLevel()
 	system("cls");
 
 	index = (index + 1 == size) ? 0 : index + 1;
+	
+	//
 	SetLevel(arr[index]);
 }

@@ -26,10 +26,10 @@
     <ClCompile Include="Level\IntroLevel.cpp" />
     <ClCompile Include="Level\Level.cpp" />
     <ClCompile Include="Level\TitleLevel.cpp" />
-    <ClCompile Include="System\Engine.cpp" />
+    <ClCompile Include="Engine\Engine.cpp" />
     <ClCompile Include="System\GameMode.cpp" />
-    <ClCompile Include="System\Input.cpp" />
-    <ClCompile Include="System\Utils.cpp" />
+    <ClCompile Include="Input\Input.cpp" />
+    <ClCompile Include="Utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Level\G11.h" />
@@ -37,13 +37,13 @@
     <ClInclude Include="Level\IntroLevel.h" />
     <ClInclude Include="Level\Level.h" />
     <ClInclude Include="Level\TitleLevel.h" />
-    <ClInclude Include="System\Color.h" />
+    <ClInclude Include="Utils\Color.h" />
     <ClInclude Include="HUD\HUD.h" />
-    <ClInclude Include="System\Engine.h" />
+    <ClInclude Include="Engine\Engine.h" />
     <ClInclude Include="System\GameMode.h" />
-    <ClInclude Include="System\Input.h" />
-    <ClInclude Include="System\Singleton.h" />
-    <ClInclude Include="System\Utils.h" />
+    <ClInclude Include="Input\Input.h" />
+    <ClInclude Include="Utils\Singleton.h" />
+    <ClInclude Include="Utils\Utils.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

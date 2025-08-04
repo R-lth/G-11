@@ -18,7 +18,7 @@
     <ClCompile Include="Game.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="System\Utils.cpp">
+    <ClCompile Include="Utils\Utils.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="HUD\HUD.cpp">
@@ -27,10 +27,10 @@
     <ClCompile Include="HUD\MenuUI.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="System\Input.cpp">
+    <ClCompile Include="Input\Input.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="System\Engine.cpp">
+    <ClCompile Include="Engine\Engine.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Level\Level.cpp">
@@ -50,10 +50,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="System\Color.h">
+    <ClInclude Include="Utils\Color.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="System\Utils.h">
+    <ClInclude Include="Utils\Utils.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="HUD\HUD.h">
@@ -62,13 +62,13 @@
     <ClInclude Include="HUD\MenuUI.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="System\Input.h">
+    <ClInclude Include="Input\Input.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="System\Singleton.h">
+    <ClInclude Include="Utils\Singleton.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="System\Engine.h">
+    <ClInclude Include="Engine\Engine.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Level\Level.h">

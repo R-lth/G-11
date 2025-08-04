@@ -41,8 +41,9 @@ void MenuUI::KeyInput()
     {
         currentIndex = (currentIndex + 1) % size;
     }
+
     // currentIndex로 menu 지정
-    else if (Input::Get().GetKeyDown(VK_RETURN)) // Enter
+    if (Input::Get().GetKeyDown(VK_RETURN)) // Enter
     {
         if (!menus.empty())
         {
@@ -71,4 +72,10 @@ void MenuUI::Render(const std::vector<int>& startPos) const
     }
 
     Utils::SetTextColor(Color::WHITE);
+}
+
+void MenuUI::Run(const std::vector<int>& startPos)
+{
+    KeyInput();
+    Render(startPos);
 }

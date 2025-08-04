@@ -10,6 +10,7 @@ Level::~Level()
 
 void Level::BeginPlay() 
 {
+
 }
 
 void Level::Tick(float deltaTime)

@@ -15,10 +15,6 @@ Engine::Engine()
 #pragma endregion
 	// 엔진 설정
 	LoadEngineSettings();
-
-	// 메인 레벨 설정
-	GameMode::Get().SetLevel(new TitleLevel());
-	mainLevel = GameMode::Get().GetLevel();
 }
 
 Engine::~Engine()
@@ -79,23 +75,25 @@ int Engine::Height() const
 
 void Engine::BeginPlay()
 {
+	MenuUI::Get().Run({ 20, 15 });
+	mainLevel = GameMode::Get().GetLevel();
+
+	if (mainLevel) 
+	{
+		mainLevel->BeginPlay();
+	}
 }
 
 void Engine::Tick(float deltaTime)
 {
-	// 매 프레임 로직
+	if (mainLevel) 
+	{
+		mainLevel->Tick(deltaTime);
+	}
 }
 
 void Engine::Render()
 {
-#pragma region 메뉴
-	// TODO. 메뉴는 위치 고민해 보기
-	MenuUI::Get().KeyInput();
-	mainLevel = GameMode::Get().GetLevel();
-	std::vector<int> startPos = { 20, 15 };
-	MenuUI::Get().Render(startPos);
-#pragma endregion
-
 	if (mainLevel)
 	{
 		mainLevel->Render();
