@@ -3,7 +3,8 @@
 
 void Input::ProcessInput()
 {
-	for (int ix = 0; ix < 255; ++ix)
+	// 키 입력 확인.
+	for (int ix = 0; ix < 256; ++ix)
 	{
 		keyStates[ix].isPressed
 			= GetAsyncKeyState(ix) & 0x8000;
@@ -12,7 +13,7 @@ void Input::ProcessInput()
 
 void Input::StorePreviousKeyStates()
 {
-	for (int ix = 0; ix < 255; ++ix)
+	for (int ix = 0; ix < 256; ++ix)
 	{
 		keyStates[ix].wasPressed
 			= keyStates[ix].isPressed;

@@ -76,6 +76,7 @@ void MenuUI::Render(const std::vector<int>& startPos) const
 
 void MenuUI::Run(const std::vector<int>& startPos)
 {
+    // TODO. ★ KeyInput() 로직 자체가 작동 안함
     KeyInput();
     Render(startPos);
 }
