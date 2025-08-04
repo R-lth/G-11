@@ -80,7 +80,11 @@ void HUD::RenderJson(std::string filePath, std::vector<int> cursorPos)
 
     for (const auto& credit : j["intro_credit"]) {
         std::string str = credit.get<std::string>(); // "따음표" 제외
+        // TODO. Utils...로 프린트하기
         std::cout << str << std::endl;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        // TODO. 스레드 말고 타이머로
+        //std::this_thread::sleep_for(std::chrono::seconds(1));
+    
     }
+    int a = 0;
 }
