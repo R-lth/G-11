@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include "../System/GameMode.h"
+#include "../Level/Level.h"
 #include "../System/Utils.h"
 #include "../System/Input.h"
 #include <functional>
@@ -16,20 +18,20 @@ struct MenuItem
     }
 };
 
-class MenuUI
+class MenuUI : public Singleton<MenuUI>
 {
+    friend class Singleton;
+
 public:
     MenuUI();
-    ~MenuUI() = default;
+    ~MenuUI();
 
-    void Run(const std::vector<int>& startPos);
+    void KeyInput();
     void Render(const std::vector<int>& startPos) const;
 
 private:
-    std::vector<MenuItem> menus;
+    std::vector<MenuItem*> menus;
+    int size = 0;
     int currentIndex = 0;
-    bool isRunning = true;
-
-    void KeyInput();
     void ClearConsole() const;
 };

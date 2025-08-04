@@ -3,6 +3,8 @@
 #include "Singleton.h"
 #include "Input.h"
 #include "Utils.h"
+#include "../Level/Level.h"
+#include "../HUD/MenuUI.h"
 #include <fstream>
 #include <sstream>
 
@@ -13,6 +15,7 @@ struct EngineSettings
 	float framerate = 0.0f;
 };
 
+class Level;
 class Engine : public Singleton<Engine>
 {
 	friend class Singleton<Engine>;
@@ -22,7 +25,7 @@ public:
 	virtual ~Engine();
 
 	void Run();
-	void Quit();;
+	void Quit();
 
 	// 화면 가로·세로 크기 반환 함수.
 	int Width() const;
@@ -38,5 +41,6 @@ private:
 
 protected:
 	bool isQuit = false;
+	Level* mainLevel = nullptr;
 	EngineSettings settings;
 };
