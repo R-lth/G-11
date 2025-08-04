@@ -75,11 +75,12 @@ void HUD::RenderJson(std::string filePath, std::vector<int> cursorPos)
     file >> j;
 
     // TODO. ★ 스타워즈 인트로 자막 만들기 
-
-    Utils::SetPosColor({0, 0}, Color::Orange);
+    Utils::SetTextColor(Color::Orange);
+    Utils::SetCursorPos({ 0, 0/*임시14*/ });
 
     for (const auto& credit : j["intro_credit"]) {
         std::string str = credit.get<std::string>(); // "따음표" 제외
         std::cout << str << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 }
