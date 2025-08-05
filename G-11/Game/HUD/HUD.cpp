@@ -64,38 +64,38 @@ void HUD::RenderText(std::string filePath, std::vector<int> cursorPos, Color col
     }
 }
 
-//void HUD::RenderJson(std::string filePath, std::vector<int> cursorPos)
-//{
-//    std::ifstream file(filePath);
-//    if (!file.is_open()) {
-//        std::cerr << "Failed to open json: " << std::endl;
-//    }
-//
-//    json j;
-//    file >> j;
-//
-//    // TODO. ★ 스타워즈 인트로 자막 만들기 
-//    Utils::SetTextColor(Color::Orange);
-//    //Utils::SetCursorPos({ 0, 0/*임시14*/ });
-//
-//    std::vector<int> pos = { 0, 0 };
-//
-//    for (const auto& credit : j["intro_credit"]) {
-//        clock_t start = clock();
-//
-//        for (;;) {
-//            clock_t end = clock();
-//            double time = double(end - start) / CLOCKS_PER_SEC; //초단위 변환
-//            if (time > 1) 
-//            {
-//                std::string str = credit.get<std::string>(); // "따음표" 제외
-//                Utils::PrintStr(str, pos);
-//
-//                time = 0;
-//            }
-//        }
-//
-//        // TODO. 스레드 말고 타이머로
-//        //std::this_thread::sleep_for(std::chrono::seconds(1));
-//    }
-//}
+void HUD::RenderJson(std::string filePath, std::vector<int> cursorPos)
+{
+    std::ifstream file(filePath);
+    if (!file.is_open()) 
+    {
+        std::cerr << "Failed to open json: " << std::endl;
+    }
+
+    json j;
+    file >> j;
+
+    //Utils::SetTextColor(Color::Orange);
+    //Utils::SetCursorPos({ 0, 0});
+
+    Utils::SetPosColor({0, 0}, Color::Orange);
+
+    std::vector<int> pos = { 0, 0 };
+
+    for (const auto& credit : j["intro_credit"]) 
+    {
+        std::string str = credit.get<std::string>(); // "따음표" 제외
+        std::cout << str << std::endl;
+
+        // TODO. ★ 스타워즈 인트로 자막 만들기 
+        //double time = double(end - start) / CLOCKS_PER_SEC; //초단위 변환
+
+        //if (time > 1)
+        //{
+        //    std::string str = credit.get<std::string>(); // "따음표" 제외
+        //    Utils::PrintStr(str, pos);
+
+        //    time = 0;
+        //}
+    }
+}

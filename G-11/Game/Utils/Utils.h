@@ -14,5 +14,4 @@ namespace Utils
 	void SetPosColor(const std::vector<int>& pos, const Color& color);
 	void PrintChar(const char& ch, const std::vector<int>& pos);
 	void PrintChar(const char& ch, const std::vector<int>& pos, const Color& color);
-	void PrintStr(const std::string& str, const std::vector<int>& pos);
 }
