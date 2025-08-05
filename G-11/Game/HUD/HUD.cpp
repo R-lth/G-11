@@ -80,8 +80,6 @@ void HUD::RenderJson(std::string filePath, std::vector<int> cursorPos)
 
     Utils::SetPosColor({0, 0}, Color::Orange);
 
-    std::vector<int> pos = { 0, 0 };
-
     for (const auto& credit : j["intro_credit"]) 
     {
         std::string str = credit.get<std::string>(); // "따음표" 제외

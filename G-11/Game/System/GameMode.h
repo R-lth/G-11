@@ -5,6 +5,7 @@
 #include "../Level/TitleLevel.h"
 #include "../Level/IntroLevel.h"
 #include "../Level/G11.h"
+#include "../Level/EndingLevel.h"
 #include <vector>
 
 class Level;

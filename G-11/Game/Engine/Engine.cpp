@@ -15,6 +15,9 @@ Engine::Engine()
 #pragma endregion
 	// 엔진 설정
 	LoadEngineSettings();
+
+	// TODO. ★ 음악 테스트
+	//PlaySound(TEXT("../Asset/Imtr.mp3"), NULL, SND_FILENAME | SND_ASYNC);
 }
 
 Engine::~Engine()
@@ -38,8 +41,13 @@ void Engine::Run()
 	QueryPerformanceCounter(&currentTime);
 	previousTime = currentTime;
 
-	while (!isQuit)
+	while (true)
 	{
+		if (isQuit) 
+		{
+			break;
+		}
+
 		QueryPerformanceCounter(&currentTime);
 		float deltaTime = static_cast<float>(currentTime.QuadPart - previousTime.QuadPart) / frequency.QuadPart;
 
@@ -61,6 +69,7 @@ void Engine::Run()
 void Engine::Quit()
 {
 	isQuit = true;
+	exit(1);
 }
 
 int Engine::Width() const

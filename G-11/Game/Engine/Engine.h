@@ -8,6 +8,11 @@
 #include <fstream>
 #include <sstream>
 
+// TODO. 음악 테스트
+//#include <windows.h>
+//#pragma comment (lib, "winmm.lib")
+//#include <mmsystem.h>
+
 struct EngineSettings
 {
 	int width = 0;

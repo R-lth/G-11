@@ -10,7 +10,7 @@ public:
 	virtual void Tick(float deltaTime);
 	virtual void Render();
 
-	// TODO. AddActor
+	// TODO. AddActor() 함수
 	//void AddActor(Actor* newActor);
 
 public:

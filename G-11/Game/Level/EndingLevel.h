@@ -3,11 +3,11 @@
 #include "Level.h"
 #include "../HUD/HUD.h"
 
-class G11 : public Level
+class EndingLevel : public Level
 {
 public:
-	G11();
-	~G11() = default;
+	EndingLevel() = default;
+	~EndingLevel() = default;
 
 	void BeginPlay();
 	void Tick(float deltaTime);

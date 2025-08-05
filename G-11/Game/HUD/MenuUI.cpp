@@ -4,19 +4,22 @@ MenuUI::MenuUI()
 {
     menus.emplace_back(
         new MenuItem( 
-        "Next",
-        []() { GameMode::Get().NextLevel(); }
-        )
+            "Next",
+            []() { GameMode::Get().NextLevel(); } )
     );
 
-    menus.emplace_back(new MenuItem("Quit Game", []() { exit(0); }));
+    menus.emplace_back(
+        new MenuItem(
+            "Quit Game", 
+            []() { Engine::Get().Quit(); })
+    );
 
     size = static_cast<int>(menus.size());
 }
 
 MenuUI::~MenuUI()
 {
-    for (MenuItem* menu : menus)
+    for (MenuItem*& menu : menus)
     {
         if (menu) 
         {
