@@ -23,12 +23,12 @@ public:
 
 private:
 	int index = 0;
-	Level* mainLevel = nullptr;
-
 	Level* tile = nullptr;
 	Level* intro = nullptr;
 	Level* miniGame = nullptr;
 	Level* ending = nullptr;
+
+	Level* mainLevel = nullptr;
 	std::vector<Level*> arr;
 	int size = 0;
 };

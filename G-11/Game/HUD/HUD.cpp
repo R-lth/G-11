@@ -64,8 +64,11 @@ void HUD::RenderText(std::string filePath, std::vector<int> cursorPos, Color col
     }
 }
 
-void HUD::RenderJson(std::string filePath, std::vector<int> cursorPos)
+void HUD::Tick(float deltaTime, std::string filePath, std::vector<int> cursorPos)
 {
+    timer.SetTargetTime(2.0f);
+
+    //
     std::ifstream file(filePath);
     if (!file.is_open()) 
     {
@@ -82,18 +85,14 @@ void HUD::RenderJson(std::string filePath, std::vector<int> cursorPos)
 
     for (const auto& credit : j["intro_credit"]) 
     {
-        std::string str = credit.get<std::string>(); // "따음표" 제외
-        std::cout << str << std::endl;
+        timer.Tick(deltaTime);
 
-        // TODO. ★ 스타워즈 인트로 자막 만들기 
-        //double time = double(end - start) / CLOCKS_PER_SEC; //초단위 변환
+        if (timer.IsTimeout()) 
+        {
+            std::string str = credit.get<std::string>(); // "따음표" 제외
+            std::cout << str << std::endl;
+        }
 
-        //if (time > 1)
-        //{
-        //    std::string str = credit.get<std::string>(); // "따음표" 제외
-        //    Utils::PrintStr(str, pos);
-
-        //    time = 0;
-        //}
+        timer.Reset();
     }
 }

@@ -2,6 +2,7 @@
 
 GameMode::GameMode()
 {
+	// 뭔가 여기가 문제야...
 	tile = new TitleLevel();
 	intro = new IntroLevel();
 	miniGame = new G11();
@@ -13,12 +14,19 @@ GameMode::GameMode()
 	arr.emplace_back(ending);
 
 	size = static_cast<int>(arr.size());
-	mainLevel = arr[0];
+
+	// TODO. 첫 화면 테스트 
+	if (mainLevel == nullptr) 
+	{
+		mainLevel = arr[0];
+	}
 }
 
 GameMode::~GameMode()
 {
-	for (Level*& level : arr)
+	// TODO. ★ 레벨 전환 문제 살펴보기
+	// 왜 nullptr인지
+	/*for (Level*& level : arr)
 	{
 		if (level) 
 		{
@@ -26,12 +34,22 @@ GameMode::~GameMode()
 			level = nullptr;
 		}
 	}
-	arr.clear();
+	arr.clear();*/
 }
 
 void GameMode::SetLevel(Level* newLevel)
 {
+	printf("AddLevel : new %p main %p", newLevel, mainLevel);
+
+	if (mainLevel)
+	{
+		delete mainLevel;
+		mainLevel = nullptr;
+	}
+
 	mainLevel = newLevel;
+
+	printf("AddLevel : new %p main %p", newLevel, mainLevel);
 }
 
 Level* GameMode::GetLevel()
@@ -43,7 +61,13 @@ void GameMode::NextLevel()
 {
 	system("cls");
 
-	index = (index + 1 == size) ? 0 : index + 1;
+	// TODO. ★ 레벨 전환 이슈
+	index = (index + 1 == size) ? size : index + 1;
+
+	if (index == size) 
+	{
+		Engine::Get().Quit();
+	}
 
 	SetLevel(arr[index]);
 }

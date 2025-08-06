@@ -15,19 +15,19 @@ Engine::Engine()
 #pragma endregion
 	// 엔진 설정
 	LoadEngineSettings();
-
-	// TODO. ★ 음악 테스트
-	//PlaySound(TEXT("../Asset/Imtr.mp3"), NULL, SND_FILENAME | SND_ASYNC);
 }
 
 Engine::~Engine()
 {
+	printf("소멸자 : %p", mainLevel);
+
 	if (mainLevel) 
 	{
 		delete mainLevel;
 		mainLevel = nullptr;
 	}
 }
+
 
 void Engine::Run()
 {
@@ -85,9 +85,10 @@ int Engine::Height() const
 void Engine::BeginPlay()
 {
 	MenuUI::Get().Run({ 20, 15 });
+	// TODO. ★ 레벨 전환 테스트
 	mainLevel = GameMode::Get().GetLevel();
 
-	if (mainLevel) 
+	if (mainLevel)
 	{
 		mainLevel->BeginPlay();
 	}
