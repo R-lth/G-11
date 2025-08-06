@@ -31,7 +31,7 @@
     <ClCompile Include="Engine\Engine.cpp" />
     <ClCompile Include="System\GameMode.cpp" />
     <ClCompile Include="Input\Input.cpp" />
-    <ClCompile Include="Utils\Timer.cpp" />
+    <ClCompile Include="Timer\Timer.cpp" />
     <ClCompile Include="Utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -43,13 +43,13 @@
     <ClInclude Include="Level\Level.h" />
     <ClInclude Include="Level\TitleLevel.h" />
     <ClInclude Include="System\GameStat.h" />
+    <ClInclude Include="Timer\Timer.h" />
     <ClInclude Include="Utils\Color.h" />
     <ClInclude Include="HUD\HUD.h" />
     <ClInclude Include="Engine\Engine.h" />
     <ClInclude Include="System\GameMode.h" />
     <ClInclude Include="Input\Input.h" />
     <ClInclude Include="Utils\Singleton.h" />
-    <ClInclude Include="Utils\Timer.h" />
     <ClInclude Include="Utils\Utils.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

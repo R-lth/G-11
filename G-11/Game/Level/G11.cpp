@@ -6,10 +6,10 @@ G11::G11()
 	timer = 0;
 
 	// 아무래도 게임이 시작하자마자 게임 인풋 받고 시작해야 겠지?
-	PlayGame();
+	Play();
 }
 
-void G11::PlayGame()
+void G11::Play()
 {
 	// 여기서 입력 처리와 동시에
 	// 실질적인 게임 계산
@@ -116,17 +116,16 @@ void G11::BeginPlay()
 void G11::Tick(float deltaTime)
 {
 	// 여기서 
-	timer += deltaTime;
 
 	// TODO. ★ beat에 맞춰서 액터를 생성
 	// TODO. ★ beat에 맞춰서 액터가 점차 내려옴...
 	// 근데 이게 레벨의 역할이냐, 액터의 역할이냐를 고민해봐야 함
-	if (timer > beatInterval)
-	{
-		// TODO. ■ 테스트. 그럼 여기서 액터(A,S,D)를 랜덤으로 생성
-		Utils::SetCursorPos({ 0, 0 });
-		std::cout << "A" << std::endl;
-	}
+	//if (timer > beatInterval)
+	//{
+	//	// TODO. ■ 테스트. 그럼 여기서 액터(A,S,D)를 랜덤으로 생성
+	//	Utils::SetCursorPos({ 0, 0 });
+	//	std::cout << "A" << std::endl;
+	//}
 }
 
 void G11::Render()

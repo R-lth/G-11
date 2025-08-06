@@ -51,10 +51,10 @@
     <ClCompile Include="Level\EndingLevel.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Utils\Timer.cpp">
+    <ClCompile Include="Actor\Actor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Actor\Actor.cpp">
+    <ClCompile Include="Timer\Timer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -98,13 +98,13 @@
     <ClInclude Include="Level\EndingLevel.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Utils\Timer.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="System\GameStat.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Actor\Actor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer\Timer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
