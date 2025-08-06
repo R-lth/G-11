@@ -3,7 +3,7 @@
 G11::G11()
 {
 	//매 프레임마다 타이머 갱신
-	timer = 0;
+	timer = beatInterval;
 
 	// 아무래도 게임이 시작하자마자 게임 인풋 받고 시작해야 겠지?
 	Play();
@@ -115,17 +115,27 @@ void G11::BeginPlay()
 
 void G11::Tick(float deltaTime)
 {
-	// 여기서 
+	// TODO. [레벨] beat에 맞춰서 액터를 생성
+	// TODO. [액터] beat에 맞춰서 액터가 점차 내려옴...
 
-	// TODO. ★ beat에 맞춰서 액터를 생성
-	// TODO. ★ beat에 맞춰서 액터가 점차 내려옴...
-	// 근데 이게 레벨의 역할이냐, 액터의 역할이냐를 고민해봐야 함
-	//if (timer > beatInterval)
-	//{
-	//	// TODO. ■ 테스트. 그럼 여기서 액터(A,S,D)를 랜덤으로 생성
-	//	Utils::SetCursorPos({ 0, 0 });
-	//	std::cout << "A" << std::endl;
-	//}
+	timer.Tick(deltaTime);
+
+	if (timer.IsTimeout()) 
+	{
+		// TODO. ■ 테스트. 그럼 여기서 액터(A,S,D)를 랜덤으로 생성
+		Utils::SetCursorPos({ 0, 0 });
+		std::cout << "A" << std::endl;
+
+		Utils::SetCursorPos({ 20, 0 });
+		std::cout << "A" << std::endl;
+
+		Utils::SetCursorPos({ 40, 0 });
+		std::cout << "A" << std::endl;
+		// 임시
+		system("cls");
+
+		timer.Reset();
+	}
 }
 
 void G11::Render()
