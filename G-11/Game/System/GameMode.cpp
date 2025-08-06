@@ -39,7 +39,7 @@ GameMode::~GameMode()
 
 void GameMode::SetLevel(Level* newLevel)
 {
-	printf("AddLevel : new %p main %p", newLevel, mainLevel);
+	//printf("AddLevel : new %p main %p", newLevel, mainLevel);
 
 	if (mainLevel)
 	{
@@ -49,7 +49,7 @@ void GameMode::SetLevel(Level* newLevel)
 
 	mainLevel = newLevel;
 
-	printf("AddLevel : new %p main %p", newLevel, mainLevel);
+	//printf("AddLevel : new %p main %p", newLevel, mainLevel);
 }
 
 Level* GameMode::GetLevel()
