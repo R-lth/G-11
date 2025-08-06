@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Actor\Actor.cpp" />
     <ClCompile Include="Level\EndingLevel.cpp" />
     <ClCompile Include="Level\G11.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -34,12 +35,14 @@
     <ClCompile Include="Utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor\Actor.h" />
     <ClInclude Include="Level\EndingLevel.h" />
     <ClInclude Include="Level\G11.h" />
     <ClInclude Include="HUD\MenuUI.h" />
     <ClInclude Include="Level\IntroLevel.h" />
     <ClInclude Include="Level\Level.h" />
     <ClInclude Include="Level\TitleLevel.h" />
+    <ClInclude Include="System\GameStat.h" />
     <ClInclude Include="Utils\Color.h" />
     <ClInclude Include="HUD\HUD.h" />
     <ClInclude Include="Engine\Engine.h" />

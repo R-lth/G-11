@@ -2,8 +2,15 @@
 #include <Windows.h>
 #include <iostream>
 
+// 음악
+#pragma comment (lib, "winmm.lib")
+#include <mmsystem.h>
+
 int main()
 {
+    // 음악 루프 재생
+    PlaySound(TEXT("../Asset/Imtr.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+
     Engine* engine = new Engine();
     engine->Run();
 
